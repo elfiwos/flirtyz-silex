@@ -1,0 +1,87 @@
+<div id = "view-container" ng-controller="DashboardController ">
+  <div id = "search-dashboard">
+   <p>Dashboard</p>
+  </div>
+
+<div id = "information-container">
+<a href = "#/categories">
+  <div class = "informations">
+    <div class = "first-text-info">
+    <p># OF UNLOCKED CATEGORIES</p>
+    </div>
+    <div class = "first-counter-info">
+
+     <div class="circle circle-border">
+     <div class="circle-inner">
+         <div class="score-text">{{unlockedCategories}}</div>
+     </div>
+    </div>
+    <p class = "sub-text">Free Categories</p>
+
+    </div>
+    </a>
+  </div>
+  
+  <div class = "informations">
+  <a href = "#/categories">
+    <div class = "second-text-info">
+    <p># OF PREMIUM CATEGORIES</p>
+    </div>
+    <div class = "second-counter-info">
+      <div class="circle circle-border second-circle">
+     <div class="circle-inner">
+         <div class="score-text">{{preminumCategories}}</div>
+     </div>
+    </div>
+     <p class = "sub-text">Paid Categories</p>
+    </div>
+    </a>
+  </div>
+  <div class = "informations" >
+  <a href = "#/emojis">
+    <div class = "third-text-info">
+    <p># OF UNLOCKED EMOJIS</p>
+    </div>
+    <div class = "third-counter-info">
+      <div class="circle circle-border third-circle">
+     <div class="circle-inner">
+         <div class="score-text">{{unlockedEmojis}}</div>
+     </div>
+    </div>
+     <p class = "sub-text">Free Emojis</p>
+    </div>
+    </a>
+  </div>
+  <div class = "informations" >
+  <a href = "#/emojis">
+    <div class = "fourth-text-info">
+    <p># OF UNLOCKED EMOJIS</p>
+    </div>
+    <div class = "fourth-counter-info">
+      <div class="circle circle-border fourth-circle">
+     <div class="circle-inner">
+         <div class="score-text">{{paidEmojis}}</div>
+     </div>
+    </div>
+    <p class = "sub-text">Paid Emojis</p>
+    </div>
+    </a>
+  </div>
+  <div class = "informations" >
+  <a href = "#/advertisments">
+    <div class = "fifth-text-info">
+    <p># OF ADVERTISMENTS</p>
+    </div>
+    <div class = "fifth-counter-info">
+      <div class="circle circle-border fifth-circle">
+     <div class="circle-inner">
+         <div class="score-text">{{numberOfAdvertisments}}</div>
+     </div>
+
+    </div>
+    <p class = "sub-text">Banner Advertisments</p>
+    </div>
+    </a>
+  </div>
+</div>
+</div>

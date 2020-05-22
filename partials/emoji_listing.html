@@ -1,0 +1,59 @@
+<div id= "categories-container" ng-controller="EmojiController">
+  <div id = "buttons-container">
+  
+  </div>
+  <div id = "white-container">
+   <div id = "search-category">
+   <p>Category Current Emoji List</p>
+  </div>
+  <div style="margin-left:25px;margin-top: 10px;">
+  <a style="margin-left:25px"><button id="showPopup"> <img src="assets/images/partials/plus-category.png"></img>&nbsp Create Emoji</button></a>
+  <input type = "checkbox" ng-model="checkAll">&nbsp Select All   &nbsp 
+  <button ng-click="deleteEmojis()" style="margin-left:25px"> <img src="assets/images/partials/delete-category.png"></img>&nbsp Delete Emoji</button>
+  </div>
+  <hr style="margin:10px 0;display:block">
+    <ul class="emoji-listing-container">
+      <li class="emoji-listing" ng-repeat="emoji in emojis">
+      <label>
+        <img ng-src="uploads/emojicategory/{{emoji.image}}" > 
+      <br><span>{{emoji.name}}</span>
+      <input type="checkbox"  ng-checked="checkAll" ng-model="emoji.selected">
+      </label>
+      
+      </li>
+    </ul>
+  </div>
+
+   	</li>
+     
+   </ul>
+  </div>
+
+  </div>
+  <div id="overlay"  style="">
+<div id="popup" style="background-color:white;" >
+    <a id="closePopup" style="float:right;margin-right:5px;color:red;text-decoration:none;cursor:pointer;font-style:italic;font-weight:bold;padding:5px;">X</a>
+     <div class = "emoji-wrapper categories-create">
+     <img id="emojiPreview" ng-src="assets/images/partials/actual-advertisment.png">    
+     </div>
+
+     <div class = "emoji-buttons create-categories-btn">
+      <button id = "test"> Choose File </button>
+      <input type="file" onchange="readURL(this, 0);return false;" id="emojiImageChange" name="emojiImage" file-model="emoji.myFile" class="upload advertisment-upload"/>
+     </div>
+       <div id = "file_name" style="max-width:150px;overflow:hidden;">{{emoji.myFile.name || "No file selected" }}</div>
+      <div id = "version-container">
+      <label>Category:</label>&nbsp &nbsp
+
+      <select ng-options="category.name for category in categories" ng-model="defaultCategory" >
+        
+      </select>
+     </div>
+      <div id = "name-container">
+      <label>Name:</label>&nbsp &nbsp
+      <input type = "text" ng-model="emoji.name">
+     </div>   
+<button ng-click="saveEmoji(emoji)" class = "update-ad-button" id = "save-button"> <img src="assets/images/partials/save.png"></img>&nbsp Save</button>
+</div> 
+</div>
+</div>

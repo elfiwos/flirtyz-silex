@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/bootstrap-combined.min.css">
+    <style>
+
+        .table tr:first-child > td {
+            border-top: 1px solid #ededed !important;
+        }
+        td {
+            font-family: "Source Sans Pro" !important;
+            color: rgb(122, 122, 122) !important;
+            border: 4px solid #fff;
+        }
+        .table > tbody > tr:nth-child(odd) > td {
+            padding: 8px;
+            background-color: #f2f4f5 !important;
+        }
+        .table > tbody > tr:nth-child(even) > td {
+            background-color: #f7f8fa !important;
+            padding: 8px;
+        }
+        .no-border{
+            border-left: 0px !important;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id= "categories-container" ng-controller="AdvertismentController">
+    <div class="col-md-12" style="margin-top: 50px">
+        <table class="table">
+            <thead>
+            <th>No</th>
+            <th>Ad Name</th>
+            <th>Ad Description</th>
+            <th># of Clicks</th>
+            <th>Created Date</th>
+
+            </thead>
+
+            <tbody>
+            <tr ng-repeat="adClick in adClicks">
+                <td class="no-border">{{$index + 1}}</td>
+                <td>{{adClick.name}}</td>
+                <td>{{adClick.description}}</td>
+                <td>{{adClick.click_count}}</td>
+                <td>{{adClick.created_at}}</td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+</body>
+</html>

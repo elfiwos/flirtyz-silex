@@ -1,0 +1,110 @@
+<div id= "categories-container" ng-controller="AdvertismentController ">
+  <div id = "buttons-container">
+  <a href = "#/create_advertisment"> <button> <img src="assets/images/partials/plus-category.png"></img>&nbsp Create Ad</button></a>
+ <!--  <button> <img src="assets/images/partials/rearrange-category.png"></img>&nbsp Rearrange Ads</button> -->
+    <input type = "checkbox" ng-model="selectedAll" ng-click="checkAll()">&nbsp Select All   &nbsp 
+   <button ng-click="deleteSelected()"> <img src="assets/images/partials/delete-category.png"></img>&nbsp Delete Selected</button>
+  </div>
+  <div id = "white-container">
+   <div id = "search-category">
+   <p>Banner Advertisment List</p>
+   <input type = "text" placeholder = "Search" ng-model="input.searchInput.name">
+   <img src="assets/images/partials/search.png"></img>
+  </div>
+   <div id = "actual-categories">
+   <ul>
+
+   	<li ng-repeat="advertisment in advertisments | filter:input.searchInput:strict">
+   	 <div  class = "emoji-wrapper">
+   	 <img ng-click="show_advertisment(advertisment.id, $index)"  class = "emoji-wrapper-popup" src="uploads/advertisment/{{advertisment.image}}"></img>  	 
+   	 </div>
+
+    
+    <div  id="overlay_{{advertisment.id}}"  style="">
+    <div ng-show="showAd" class = "popup_div_orginal" id="popup_{{advertisment.id}}" style="background-color:white;" >
+     <p ng-click="cancel_advertisment(advertisment.id, $index)" class = "cancel-popup-ad">X</p>
+     <div class = "emoji-wrapper categories-create">    
+     <img  src="uploads/advertisment/{{advertisment.image}}"></img>
+     </div>
+       <div class = "ad-text-container">
+       <label>Name:</label>
+     <p> {{advertisment.name}}</p>
+     </div>
+      <div class = "ad-text-container">
+      <label>Description:</label>
+     <p> {{advertisment.description}}</p>
+     </div>
+     <div class = "ad-text-container">
+      <label>Advertisment URL:</label>
+     <p> {{advertisment.url}}</p>
+     </div>
+      </div>
+      </div>
+
+   	 <div class = "emoji-text-container">
+   	 <p> {{advertisment.name}}</p>
+   	 </div>
+   	 <div class = "emoji-buttons">
+     <input type = "checkbox" ng-model="advertisment.Selected" > Select &nbsp &nbsp
+   	  <button ng-click="showDetails = ! showDetails"> <img src="assets/images/partials/manage-category.png"></img>&nbsp Manage</button>
+     <button  ng-click="deleteAd(advertisment.id, $index)"> <img src="assets/images/partials/delete-category.png"></img>&nbsp Delete</button>
+   	 </div>
+   	 <hr class = "horizontal-line">
+
+
+
+    <div ng-controller="UploadController " ng-show="showDetails" id = "{{advertisment.id}}" class = "white-container-advertisments">
+   <div  id = "search-category" class = "search-category-new">
+   <p class = "new-search-category"><img src="assets/images/partials/manage-category.png"></img>&nbsp Manage Banner Advertisment</p>
+  </div>
+   <div id = "actual-categories" >
+ 
+     <div class = "emoji-wrapper categories-create">
+     <img  ng-src="{{imageSrc}}" src="uploads/advertisment/{{advertisment.image}}"  id = "preview"></img>    
+     </div>
+
+     <div class = "emoji-buttons create-categories-btn">
+      <button id = "test"> Choose File </button>
+      <input ng-file-select="onFileSelect($files)" id="imgInp" name = "fileToUpload" type="file"  class="upload advertisment-upload"  />
+     </div>
+      <div id = "file_name"><input value = "{{imageName}}" id="uploadFile"  placeholder = "{{advertisment.image}}" disabled="disabled"/></div>
+      <div id = "name-container" class = "name-container-ads">
+      <label>Name:</label>&nbsp &nbsp
+      <input ng-model="advertisment.name"  name = "name" type = "text">
+     </div>             
+     <div id = "version-container">
+      <label>Description:</label>&nbsp &nbsp
+      <textarea ng-model="advertisment.description"  name = "description"></textarea>
+     </div>   
+     <div id = "url-container">
+      <label>Advertisment URL (use format like http://example.com):</label>&nbsp &nbsp
+      <input id = "url-text" ng-model="advertisment.url" name = "url" type = "text">
+     </div>
+  </div>
+  <button ng-click="update_advertisment(advertisment.id, $index)" class = "update-ad-button" id = "save-button"> <img src="assets/images/partials/save.png"></img>&nbsp UPDATE</button>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   	</li>
+   
+  	
+   <!--  <p id = "view-more-categories">View More &nbsp<img src="assets/images/partials/view-more.png"></img></p> -->
+   </ul>
+  </div>
+
+  </div>
+ 
+</div>

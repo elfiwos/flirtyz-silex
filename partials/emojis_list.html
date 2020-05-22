@@ -1,0 +1,65 @@
+<div id= "categories-container">
+<br><br>
+  <div id = "white-container-emojs">
+   <div id = "search-category">
+   <p>Category List</p>
+   <input type = "text" placeholder = "Search" ng-model="input.searchInput.name">
+   <img src="assets/images/partials/search.png"></img>
+  </div>
+   <div id = "actual-categories">
+   <ul>
+    <li ng-repeat="category in categories | filter:input.searchInput:strict">
+     <div class = "emoji-wrapper">
+     <img src="uploads/emojicategory/{{category.image}}"></img>    
+     </div>
+     <div class = "emoji-text-container">
+     <p>{{category.name}}<span>{{category.version}}</span></p>
+     </div>
+     <div class = "emoji-buttons">
+      <a href="#/emoji-listings/{{category.id}}" class="button"> <img src="assets/images/partials/view-emojs.png"></img>&nbsp View All Emojis In This Category</a>
+     </div>
+     <hr class = "horizontal-line">
+    </li>
+    <!-- <li>
+     <div class = "emoji-wrapper">
+     <img src="assets/images/partials/main-category.png"></img>    
+     </div>
+     <div class = "emoji-text-container">
+     <p>Category2 <span>Version</span></p>
+     </div>
+     <div class = "emoji-buttons">
+      <button> <img src="assets/images/partials/view-emojs.png"></img>&nbsp View All Emojis In This Category</button>
+     </div>
+     <hr class = "horizontal-line">
+    </li>
+      <li>
+     <div class = "emoji-wrapper">
+     <img src="assets/images/partials/main-category.png"></img>    
+     </div>
+     <div class = "emoji-text-container">
+     <p>Category3 <span>Version</span></p>
+     </div>
+     <div class = "emoji-buttons">
+      <button> <img src="assets/images/partials/view-emojs.png"></img>&nbsp View All Emojis In This Category</button>
+     </div>
+     <hr class = "horizontal-line">
+    </li>
+      <li>
+     <div class = "emoji-wrapper">
+     <img src="assets/images/partials/main-category.png"></img>    
+     </div>
+     <div class = "emoji-text-container">
+     <p>Category4 <span>Version</span></p>
+     </div>
+     <div class = "emoji-buttons">
+      <button> <img src="assets/images/partials/view-emojs.png"></img>&nbsp View All Emojis In This Category</button>
+     </div>
+     <hr class = "horizontal-line">
+    </li> -->
+  <!--   <p id = "view-more-categories">View More &nbsp<img src="assets/images/partials/view-more.png"></img></p> -->
+   </ul>
+  </div>
+
+  </div>
+ 
+</div>

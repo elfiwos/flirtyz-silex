@@ -1,0 +1,129 @@
+#template-page{
+width:1200px;
+overflow-x: hidden;
+overflow-y: hidden;
+}
+#left-navigation{	
+width:148px;
+height:1000px;
+background-color:#1c1c1c;
+}
+#top-navigation{
+width:1054px;
+height:60px;
+position:relative;
+margin-top: -1000px;
+left:148px;
+background-color:#fff;	
+}
+#phlurtyz-image{
+width:146px;
+height:117px;
+border-bottom: 2px solid #222629;
+}
+#phlurtyz-image img{
+margin-left: 28px;
+padding-top: 14px;
+}
+#dashboard-image{
+width:146px;
+height:91px;
+border-bottom: 2px solid #222629;
+background-color:#222629;
+}
+#dashboard-image img{
+margin-left: 50px;
+padding-top: 21px;
+}
+#categories-image{
+width:146px;
+height:91px;
+border-bottom: 2px solid #222629;
+background-color:#222629;
+}
+#categories-image img{
+margin-left: 50px;
+padding-top: 21px;
+}
+#emoji-image{
+width:146px;
+height:91px;
+border-bottom: 2px solid #222629;
+background-color:#222629;
+}
+#emoji-image img{
+margin-left: 50px;
+padding-top: 21px;
+}
+#advertisment-image{
+width:146px;
+height:91px;
+border-bottom: 2px solid #222629;
+background-color:#222629;
+}
+#advertisment-image img{
+margin-left: 50px;
+padding-top: 21px;
+}
+#welcome-admin{
+width:146px;
+height:125px;
+border-bottom: 2px solid #222629;
+}
+
+#welcome-admin p:first-of-type{
+font-size:18px;
+color:#5d5e5f;
+font-family:Myriad Pro;
+margin-left: 26px;
+padding-top: 50px;
+}
+#welcome-admin p:nth-of-type(2){
+margin-left: 30px;
+font-size:13px;
+color:#5d5e5f;
+font-family:Myriad Pro;
+position: relative;
+top:-10px;
+}
+#dashboard-image p, #categories-image p, #emoji-image p, #advertisment-image p{
+margin-left: 50px;
+font-size:13px;
+color:#5d5e5f;
+font-family:Myriad Pro;
+
+}
+ #advertisment-image p{
+margin-left: 40px;
+}
+#advertisment-image button{
+margin-left: 10px !important;
+margin-right: auto !important;
+color:#000;
+font-family:Myriad Hebrew;
+}
+#top-navigation p{
+margin-left: 50px;
+padding-top: 27px;
+font-size:13px;
+color:#000;
+font-family:Myriad Hebrew;
+}
+#top-navigation span{
+color:#f59bc6;
+}
+#top-navigation img:first-of-type{
+position: relative;
+top:-45px;
+left: 440px;
+}
+#top-navigation img:nth-of-type(2){
+position: relative;
+top:-45px;
+left:750px;
+}
+#top-navigation img:nth-of-type(3){
+position: relative;
+top:-45px;
+left:800px;
+}

@@ -1,0 +1,76 @@
+<div id= "categories-container" ng-controller="EmojiController">
+  <div id = "buttons-container">
+  
+   <a href = "#/create_categories"><button> <img src="assets/images/partials/plus-category.png"></img>&nbsp Create Category</button></a>
+
+   
+   <input type = "checkbox" ng-model="categories.checkAll">&nbsp Select All   &nbsp 
+   <button ng-click="deleteCategories()"> <img src="assets/images/partials/delete-category.png"></img>&nbsp Delete Selected</button>
+  </div>
+  <div id = "white-container">
+   <div id = "search-category">
+   <p>Category List</p>
+   <input type = "text" placeholder = "Search" ng-model="input.searchInput.name">
+   <img src="assets/images/partials/search.png"></img>
+  </div>
+   <div id = "actual-categories">
+   <ul>
+   	<li ng-repeat="cat in categories | filter:input.searchInput:strict" id="category-{{cat.id}}">
+   	 <div class = "emoji-wrapper">
+   	 <img src="uploads/emojicategory/{{cat.image}}">  	 
+   	 </div>
+   	 <div class = "emoji-text-container">
+   	 <p>{{cat.name}} <span>{{cat.version}}</span></p>
+   	 </div>
+   	 <div class = "emoji-buttons">
+     <input type = "checkbox" ng-checked="categories.checkAll" ng-model="cat.selected"> Select &nbsp &nbsp
+   	  <a class="button" href="#/category/{{cat.id}}"> <img src="assets/images/partials/manage-category.png"></img>&nbsp Manage</a>
+     <button ng-click="deleteCategory(cat.id, $index)"> <img src="assets/images/partials/delete-category.png"></img>&nbsp Delete</button>
+   	 </div>
+   	 <hr class = "horizontal-line">
+
+
+    <div ng-show="showDetails" id = "{{cat.id}}" class = "white-container-advertisments">
+   <div  id = "search-category" class = "search-category-new">
+   <p class = "new-search-category"><img src="assets/images/partials/manage-category.png"></img>&nbsp Manage Category</p>
+  </div>
+   <div id = "actual-categories" >
+ 
+     <div class = "emoji-wrapper categories-create">
+     <img id="categoryImagePreview-{{cat.id}}" ng-src="uploads/emojicategory/{{cat.image}}">    
+     </div>
+
+     <div class = "emoji-buttons create-categories-btn">
+      <button id = "test"> Choose File </button>
+      <input type="file" onchange="readURL(this, {{cat.id}});return false;" id="categoryImageChange" name="categoryImage" file-model="category.myFile" class="upload advertisment-upload"/>
+     </div>
+       <div id = "file_name" style="max-width:150px;overflow:hidden;">{{category.myFile.name || "No file selected" }}</div>
+      <div id = "version-container">
+      <label>Version:</label>&nbsp &nbsp
+      <select ng-model="cat.version">
+        <option></option>
+        <option ng-selected='cat.version'>Free</option>
+        <option>Premium</option>
+      </select>
+     </div>
+      <div id = "name-container">
+      <label>Name:</label>&nbsp &nbsp
+      <input type = "text" ng-model="cat.name">
+     </div>   
+  </div>
+  <button ng-click="saveCategory(cat)" class = "update-ad-button" id = "save-button"> <img src="assets/images/partials/save.png"></img>&nbsp UPDATE</button>
+  <div style="margin-left:25px">
+  <span>Category Current Emoji List</span>
+  <a href = "#/create_categories" style="margin-left:25px"><button> <img src="assets/images/partials/plus-category.png"></img>&nbsp Create Emoji</button></a>
+  <button ng-click="deleteCategories()" style="margin-left:25px"> <img src="assets/images/partials/delete-category.png"></img>&nbsp Delete Emoji</button>
+  </div>
+  </div>
+
+   	</li>
+  <!--   <p id = "view-more-categories">View More &nbsp<img src="assets/images/partials/view-more.png"></img></p> -->
+   </ul>
+  </div>
+
+  </div>
+ 
+</div>

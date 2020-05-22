@@ -1,0 +1,53 @@
+<div id= "categories-container">
+<br><br>
+
+ <a id = "ad-back-button" href = "#/advertisments"><button>Back</button></a>
+  <div id = "white-container-emojs" ng-controller="UploadController ">
+
+   <div  id = "search-category" class = "search-category-new">
+   <p class = "new-search-category"><img src="assets/images/partials/plus-2.png"></img>&nbsp Add Banner Advertisment</p>
+  </div>
+   <div id = "actual-categories" >
+ 
+     <div class = "emoji-wrapper categories-create">
+     <img  ng-src="{{imageSrc}}"  id = "preview" src="assets/images/partials/actual-advertisment.png"></img>    
+     </div>
+
+     <div class = "emoji-buttons create-categories-btn">
+      <button id = "test"> Choose File </button>
+      <input ng-file-select="onFileSelect($files)" id="imgInp" name = "fileToUpload" type="file"  class="upload advertisment-upload"  />
+     </div>
+      <div id = "file_name"><input value = "{{imageName}}" id="uploadFile"  placeholder = "No file selected" disabled="disabled"/></div>
+      <div id = "name-container" class = "name-container-ads">
+      <label>Name:</label>&nbsp &nbsp
+      <input ng-model="ad.name" name = "name" type = "text">
+     </div>             
+     <div id = "version-container">
+      <label>Description:</label>&nbsp &nbsp
+      <textarea ng-model="ad.description" name = "description"></textarea>
+     </div>
+     <div id = "url-container">
+      <label>Advertisment URL(use format like http://example.com):</label>&nbsp &nbsp
+      <input id = "url-text" ng-model="ad.url" name = "url" type = "text">
+     </div>
+  
+     
+  </div>
+
+  <button ng-click="save_advertisment()" id = "save-button"> <img src="assets/images/partials/save.png"></img>&nbsp SAVE</button>
+
+
+
+
+
+  </div>
+     
+
+
+
+ 
+</div>
+
+
+
+

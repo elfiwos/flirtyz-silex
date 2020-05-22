@@ -1,0 +1,263 @@
+#view-container{
+width:1054px;
+min-height:939px;
+position:relative;
+left:148px;
+background-color:#f3f5f9;
+}
+#view-container-login{
+width:1054px;
+min-height: 939px;
+position: relative;
+left:148px;
+background-color:#f3f5f9;
+}
+form{
+margin-left: 200px;
+padding-top: 100px;
+}
+#search-dashboard{
+margin-left: auto;
+margin-right: auto;
+padding-top:53px;
+width:942px;
+border-bottom: 2px solid #dddddd;
+height: 40px;
+}
+#search-dashboard p{
+font-size:14px;
+color:#000;
+font-family:Myriad Hebrew;
+position: relative;
+top: 20px;
+}
+#search-dashboard input{
+margin-top: -33px;
+margin-left: 700px;
+width:230px;
+height:22px;
+}
+#information-container{
+margin-left: auto;
+margin-right: auto;
+width:942px;
+}
+#search-dashboard img{
+margin-top: -78px;
+margin-left: 920px;
+}
+.informations{
+float:left;
+margin-right:26px;
+margin-top:30px;
+width:296px;
+height:195px;
+}
+.informations:nth-of-type(3),.informations:nth-of-type(6){
+margin-right:0px;
+
+}
+.first-text-info,.second-text-info,.third-text-info,.fourth-text-info,.fifth-text-info,.six-text-info{
+width:297px;
+height:31px;
+}
+.first-counter-info,.second-counter-info,.third-counter-info,.fourth-counter-info,.fifth-counter-info,.six-counter-info{
+width:297px;
+height:164px;
+}
+.first-text-info
+{
+background-color: #f1b805;
+}
+.second-text-info
+{
+background-color: #ec468d;
+}
+.third-text-info
+{
+background-color: #ed6347;
+}
+.fourth-text-info
+{
+background-color: #ed6347;
+}
+.fifth-text-info
+{
+background-color: #545454;
+}
+.six-text-info
+{
+background-color: #2e2e2e;
+}
+.first-text-info p, .second-text-info p, .third-text-info p, .fourth-text-info p, .fifth-text-info p, .six-text-info p {
+padding-top:7px;
+color: #fff;
+}
+.informations p{
+text-align: center;
+}
+.first-counter-info
+{
+background-color: #f7d25a;
+}
+.second-counter-info
+{
+background-color: #f0679e;
+}
+.third-counter-info
+{
+background-color: #f07e67;
+}
+.fourth-counter-info
+{
+background-color: #f07e67;
+}
+.fifth-counter-info
+{
+background-color: #686e73;
+}
+.six-counter-info
+{
+background-color: #404346;
+}
+
+.circle {
+margin-left: auto;
+margin-right: auto;
+border-radius: 50%;
+width: 98px;
+position: relative;
+top: 20px;
+}
+.circle:first-of-type{
+background-color: #f1b805;
+}
+.second-circle {
+background-color: #ed6347 !important;
+}
+.third-circle, .fourth-circle {
+background-color: #ed6347 !important;
+}
+.fifth-circle {
+background-color: #545454 !important;
+}
+.six-circle {
+background-color: #2e2e2e !important;
+margin-left: 49px !important;
+border-radius: 50% !important;
+width: 44px !important;
+position: relative;
+top: 50px !important;
+}
+
+.circle:before {
+content: "";
+display: block;
+padding-top: 100%;
+}
+
+.circle-inner {
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+text-align: center;
+}
+.score-text {
+margin: auto;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+height: 1em;
+line-height: 1em;
+font-size: 38px;
+color:#fff;
+}
+.sub-text{
+color:#fff;
+position: relative;
+top:30px;
+}
+.bottom-text{
+color:#fff;
+position: relative;
+top:60px;
+font-family: Arial;
+font-size: 14px;
+}
+.money{
+color:#fff;	
+position: relative;
+top:20px;
+left:105px;
+font-size: 37px;
+font-family: Arial;
+}
+#logout{
+cursor:pointer;
+}
+#logout-controller{
+position: relative;
+top: -30px;
+left: 400px;
+}
+
+div.popup_div{
+	visibility: visible;
+	position: fixed;
+	top: 0;
+	left: 20%;
+	margin-top: 10px;
+	border: 1px solid black;
+	z-index: 100000;
+
+}
+div.popup_div_orginal{
+	visibility: visible;
+	position: fixed;
+	top: 30%;
+    left: 25%;
+	margin-top: 10px;
+	border: 1px solid black;
+	z-index: 100000;
+	min-height: 200px;
+    min-width: 600px;
+}
+.emoji-wrapper-popup{
+cursor:pointer;
+}
+.ad-text-container{
+position: relative;
+top: -110px;
+margin-left: 170px;
+}
+div.overlay_div{
+	visibility: visible;
+	background-color: #686e73;
+	width: 100% !important;
+	height: 100% !important;
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	opacity:0.95;
+}
+.cancel-popup-ad{
+padding-left: 580px;
+font-size: 20px;
+color: red;
+cursor: pointer;
+}
+#url-format{
+font-size: 10px;
+font-family: italic;
+}
+#url-container{
+margin-left: 70px;
+}
+#url-text{
+margin-left: 70px;
+}

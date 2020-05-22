@@ -1,0 +1,247 @@
+#categories-container{
+width:1054px;
+min-height: 939px;
+position:relative;
+left:148px;
+background-color:#f3f5f9;
+}
+#buttons-container{
+margin-left: 38px;
+padding-top: 67px;
+}
+button, .button, .button:hover{
+text-decoration: none;
+background-color: #474b4d;
+border-color: #474b4d;
+color: #fff;
+text-align: center;
+vertical-align: middle;
+font-size: 13px;
+font-family: Arial;
+border: 1px solid transparent;
+border-radius: 4px;
+padding: 7px 20px;
+margin-right: 21px;
+}
+
+ input[type="checkbox"]{
+ margin: 0 0 0;
+ }
+#buttons-container input{
+ width:20px;
+ height:20px;
+}
+#white-container{
+width: 860px;
+background-color: #fff;
+margin-left: 35px;
+margin-top: 30px;
+}
+#search-category{
+margin-left: auto;
+margin-right: auto;
+padding-top:53px;
+width: 802px;
+border-bottom: 2px solid #dddddd;
+height: 10px;
+}
+
+#search-category p{
+font-size:14px;
+color:#000;
+font-family:Myriad Hebrew;
+margin-top: -30px;
+position:relative;
+top:15px;
+}
+.new-search-category{
+position:relative;
+top:0px !important;
+}
+#search-text{
+margin-top: -70px !important;;	
+}
+#search-category input{
+margin-top: -40px;
+margin-left: 560px;
+width:230px;
+height:22px;
+}
+#search-category img{
+margin-top: -85px;
+margin-left: 780px;
+}
+#search-image{
+margin-top: -115px !important;	
+}
+.search-category-new{
+height:0px !important;	
+}
+
+.new-search-category img{
+margin-top: 0px !important;
+margin-left: 0px !important;
+}
+#actual-categories{
+width:810px;
+background-color: #fafcff;
+margin-left: auto;
+margin-right: auto;
+border:1px solid #eceef1;
+margin-top: 18px;
+}
+.emoji-wrapper{
+width: 131px;
+height:99px;
+margin-left: -12px;
+margin-top: 12px;
+border: 1px solid #eceef1;
+text-align: center;
+padding-top:15px;
+background-color: #fff;
+}
+.emoji-wrapper img{
+height: 100px;
+width: 100px; 
+}
+.emoji-text-container{
+margin-top: -70px;
+margin-left: 140px;
+}
+.emoji-text-container span{
+margin-left: 80px;
+color:#ef32a2;
+}
+.emoji-buttons{
+margin-top: -55px;
+width: 376px;
+height: 40px;
+margin-left: 395px;
+border: 1px solid #eceef1;
+text-align: center;
+padding-top: 15px;
+padding-bottom: 15px;
+margin-bottom: 35px;
+}
+li{
+list-style: none;
+display: inline;
+}
+.horizontal-line{
+width:813px;
+margin-left:-27px;
+margin-bottom: 0px;
+}
+#view-more-categories{
+text-align: center;
+padding-top: 10px;
+cursor: pointer;
+}
+.categories-create{
+margin-left: 15px !important;
+}
+.create-categories-btn{
+margin-left: 180px;
+margin-top: -90px;
+width: 330px;
+}
+.create-categories-btn button{
+width: 260px;
+}
+#file_name{
+margin-top: -80px;
+margin-left: 530px;
+}
+#version-container{
+margin-left: 70px;
+margin-top: 70px;
+}
+#name-container{
+margin-left: 80px;
+}
+#version-container label{
+display:inline;
+}
+#version-container select{
+width:136px;
+}
+#name-container label{
+display:inline;
+}
+#name-container input{
+width:340px;
+}
+#save-button{
+margin-left: 725px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+#version-container textarea{
+width: 550px;
+}
+.advertisment-upload{
+position: relative;
+top: -35px;
+width: 260px;
+left: -10px;
+height: 35px;
+opacity: 0;
+}
+#uploadFile{
+border: none;
+background-color: #fafcff;
+}
+.name-container-ads{
+position: relative;
+top: 70px;
+left: 23px;
+}
+#ad-back-button{
+margin-left: 820px;
+}
+li.emoji-listing{
+	display: block;
+	/*border: 1px solid black;*/
+	overflow: hidden;
+	width: 102px;
+	float: left;
+	margin: 10px 10px 0 0;
+	background-color: #686e73;
+	color: white;
+	text-align: center;
+}
+
+ul.emoji-listing-container{
+	display: block;
+	width: 800px;
+	/*border: 1px solid black;*/
+	overflow: hidden;
+}
+li.emoji-listing img{
+	width:100px;
+	height:80px;
+}
+
+div.overlay{
+	visibility: visible;
+	background-color: #686e73;
+	width: 100% !important;
+	height: 100% !important;
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+div#popup.popup{
+	visibility: visible;
+	position: fixed;
+	top: 0;
+	left: 20%;
+	margin-top: 10px;
+	border: 1px solid black;
+	z-index: 100000;
+}
+div#popup{
+	visibility: hidden;
+}

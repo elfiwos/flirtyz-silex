@@ -1,0 +1,38 @@
+<div id= "categories-container" ng-controller="EmojiController">
+<br><br>
+  <div id = "white-container-emojs">
+   <div  id = "search-category" class = "search-category-new">
+   <p class = "new-search-category"><img src="assets/images/partials/plus-2.png"></img>&nbsp Create New Categories</p>
+
+  </div>
+   <div id = "actual-categories" >
+ 
+     <div class = "emoji-wrapper categories-create">
+     <img id="categoryImagePreview" ng-src="assets/images/partials/actual-advertisment.png">  
+     </div>
+     <div class = "emoji-buttons create-categories-btn">
+      <button>Choose File </button>
+      <input type="file" onchange="readURL(this);return false;" id="categoryImageChange" name="categoryImage" file-model="category.myFile" class="upload advertisment-upload"/>
+      
+     </div>
+     <div id = "file_name" style="max-width:150px;overflow:hidden;">{{category.myFile.name || "No file selected" }}</div>
+     <div id = "version-container">
+      <label>Version:</label>&nbsp &nbsp
+      <select ng-model="category.version">
+        <option></option>
+        <option>Free</option>
+        <option>Premium</option>
+      </select>
+     </div>
+     <div id = "name-container">
+      <label>Name:</label>&nbsp &nbsp
+      <input type = "text" ng-model="category.name">
+     </div>
+
+     
+  </div>
+  <button id = "save-button" ng-click="saveCategory()"> <img src="assets/images/partials/save.png"></img>&nbsp SAVE</button>
+  </div>
+
+ 
+</div>

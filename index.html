@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Phulrtyz</title>
+  <link href="assets/css/bootstrap-combined.min.css" rel="stylesheet">
+   <link href="assets/css/emoji.css" rel="stylesheet">
+   <link href="assets/css/partials//dashboard.css" rel="stylesheet">
+   <link href="assets/css/partials//categories.css" rel="stylesheet">
+   <link href="assets/css/partials//emojis_list.css" rel="stylesheet">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
+<script type="text/javascript" src ="assets/js/vendor/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src ="assets/js/app.js"></script>
+<script type="text/javascript" src ="assets/js/controllers/advertisment.js"></script>
+<script type="text/javascript" src ="assets/js/controllers/emojiController.js"></script>
+<script type="text/javascript" src ="assets/js/controllers/dashboard.js"></script>
+<script type="text/javascript" src ="assets/js/controllers/form.js"></script>
+   </head>
+<body ng-app="EmojiApp" >
+ 
+<div class="container" id = "template-page">
+  <div id = "left-navigation">
+    <div id = "phlurtyz-image">	
+    <img src ="assets/images/phlurtyz-image.png"></img>
+   </div>
+   <div id = "welcome-admin">
+    <p>WELCOME!!!</p>	
+    <p id = "admin-username">{{adminName}}</p>
+    </div>
+    <a href = "#/dashboard">
+    <div id = "dashboard-image">	
+    <img src ="assets/images/dashboard.png"></img>
+   <p>Dashboard</p>
+    </div>
+    </a>
+     <a href = "#/categories">
+     <div id = "categories-image">	
+    <img src ="assets/images/categories.png"></img>
+     <p>Categories</p>
+    </div>
+    </a>
+    <a href = "#/emojis">
+     <div id = "emoji-image">	
+    <img src ="assets/images/emoji.png"></img>
+     <p>Emojis</p>
+    </div>
+    </a>
+    <a href = "#/advertisments">
+     <div id = "advertisment-image">	
+    <img src ="assets/images/advertisment.png"></img>
+     <p>Advertisment</p>
+    </div>
+    </a>
+      <a href = "#/ad_analytics">
+          <div id = "advertisment-image">
+              <img src ="assets/images/advertisment.png"></img>
+              <p>Ad Analytics</p>
+          </div>
+      </a>
+    <a href = "http://104.130.229.194/phlurtyzpaid.apk">
+     <div id = "advertisment-image">  
+       <button>Download Paid App</button>
+    </div>
+    </a>
+    <a href = "http://104.130.229.194/phlurtyzfree.apk">
+     <div id = "advertisment-image">  
+       <button>Download Free App</button>
+    </div>
+    </a>
+  </div>
+  <div id = "top-navigation">
+   <p>PHLURTYZ <span>ADMINISTRATION!</span></p>
+   <img src ="assets/images/phlurtyz-text.png"></img>
+  <!-- <img src ="assets/images/setting.png"></img> -->
+ <div id = "logout-controller" ng-controller="LogoutController "> 
+<img id = "logout" ng-click="logout()" src ="assets/images/logout.png"></img> 
+</div>
+  </div>
+  <div ng-view></div>
+ </div>
+</body>
+</html>
